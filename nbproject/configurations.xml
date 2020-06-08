@@ -6,6 +6,9 @@
                    projectFiles="true">
       <itemPath>MAX30102.h</itemPath>
       <itemPath>Pulse_sensor.h</itemPath>
+      <itemPath>LCD.h</itemPath>
+      <itemPath>ADC.h</itemPath>
+      <itemPath>Configuracion.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,9 +21,7 @@
       <itemPath>Pulse_sensor.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>ADC.c</itemPath>
-      <itemPath>ADC.h</itemPath>
       <itemPath>LCD.c</itemPath>
-      <itemPath>LCD.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

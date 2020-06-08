@@ -7,6 +7,7 @@
 
 
 #include <xc.h>
+#include "Configuracion.h"
 #include "Pulse_sensor.h"
 
 void main(void) {

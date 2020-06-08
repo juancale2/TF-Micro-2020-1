@@ -1,0 +1,159 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"6 C:\Users\juanc\MPLABXProjects\TF Micro.X\ADC.c
+[v _ADC_CONFIG ADC_CONFIG `(v  1 e 1 0 ]
+"69
+[v _ADC_CONVERTIR ADC_CONVERTIR `(i  1 e 2 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"50 C:\Users\juanc\MPLABXProjects\TF Micro.X\LCD.c
+[v _ENVIA_CHAR ENVIA_CHAR `(v  1 e 1 0 ]
+"93
+[v _ENVIA_NIBBLE ENVIA_NIBBLE `(v  1 e 1 0 ]
+"104
+[v _ENVIA_LCD_CMD ENVIA_LCD_CMD `(v  1 e 1 0 ]
+"121
+[v _LEER_LCD LEER_LCD `(v  1 e 1 0 ]
+"12 C:\Users\juanc\MPLABXProjects\TF Micro.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"5 C:\Users\juanc\MPLABXProjects\TF Micro.X\Pulse_sensor.c
+[v _getSignal getSignal `(i  1 e 2 0 ]
+"12 C:\Users\juanc\MPLABXProjects\TF Micro.X/Pulse_sensor.h
+[v _BPM BPM `i  1 e 2 0 ]
+"13
+[v _Signal Signal `i  1 e 2 0 ]
+"14
+[v _IBI IBI `i  1 e 2 0 ]
+"15
+[v _Pulse Pulse `uc  1 e 1 0 ]
+"17
+[v _rate rate `[10]i  1 e 20 0 ]
+"18
+[v _sampleCounter sampleCounter `ul  1 e 4 0 ]
+"19
+[v _lastBeatTime lastBeatTime `ul  1 e 4 0 ]
+"20
+[v _P P `i  1 e 2 0 ]
+"21
+[v _T T `i  1 e 2 0 ]
+"22
+[v _thresh thresh `i  1 e 2 0 ]
+"23
+[v _amp amp `i  1 e 2 0 ]
+"24
+[v _firstBeat firstBeat `uc  1 e 1 0 ]
+"25
+[v _secondBeat secondBeat `uc  1 e 1 0 ]
+"2705 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"3263
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S167 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"3290
+[s S176 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S185 . 1 `S167 1 . 1 0 `S176 1 . 1 0 ]
+[v _LATDbits LATDbits `VES185  1 e 1 @3980 ]
+"3427
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"3625
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4223
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"6510
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"6581
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6666
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S78 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"6710
+[s S81 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S85 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S92 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S95 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S98 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S101 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S104 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S107 . 1 `S78 1 . 1 0 `S81 1 . 1 0 `S85 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 `S104 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES107  1 e 1 @4034 ]
+"6792
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"6799
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"12 C:\Users\juanc\MPLABXProjects\TF Micro.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"15
+} 0
