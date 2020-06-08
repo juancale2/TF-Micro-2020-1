@@ -1,10 +1,13 @@
 #include <xc.h>
 #include "Pulse_sensor.h"
+#include "ADC.h"
 
 int getSignal() {
-    int algo;
-    return algo;
+    ADC_CONFIG(0);   //Sensor de pulso en canal AN0
+    int signal = ADC_CONVERTIR();
+    return signal;
 }
+
 void samplePulse(void) { //triggered when Timer2 counts to 124 (2ms)
   Signal = getSignal();
   sampleCounter += 2;                         // keep track of the time in mS with this variable
