@@ -63,10 +63,10 @@ void ADC_CONFIG(char canal)
 			ADCON0=canal<<2;
 		break;
 	}
-	ADCON2 = 0x91; 	//4TAD, FOSC/64, justificación a la derecha
+	ADCON2 = 0x96; 	//4TAD, FOSC/64, justificación a la derecha
 	ADCON0bits.ADON = 1;
 }
-int  ADC_CONVERTIR(void)
+unsigned int ADC_CONVERTIR(void)
 {
 	int num;
 	ADCON0bits.GO = 1;

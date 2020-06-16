@@ -3,7 +3,7 @@
 #define RS  LATDbits.LATD0
 #define RW  LATDbits.LATD1
 #define E   LATDbits.LATD2
-#define _XTAL_FREQ 48000000UL
+#define _XTAL_FREQ 20000000UL
 
 void POS_CURSOR(unsigned char fila,unsigned char columna);
 void DISPLAY_ONOFF(unsigned char estado);
@@ -18,3 +18,4 @@ void LEER_LCD(void);
 void BLINK_CURSOR(unsigned char val);
 void GENERACARACTER(const unsigned char *vector,unsigned char pos);
 void ESCRIBE_MENSAJE(const char *cadena,unsigned char tam);
+void ENVIA_INT(unsigned int i);

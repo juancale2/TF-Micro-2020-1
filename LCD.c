@@ -160,3 +160,21 @@ void GENERACARACTER(const unsigned char *vector,unsigned char pos)
 	}
 	ENVIA_LCD_CMD(0x80);	//Dirección de la DDRAM
 }
+
+void ENVIA_INT(unsigned int i)     //Function to send int on LCD
+{   
+    int num[10];
+    int p;
+    int k=0;
+    while(i>0) {
+        num[k]=i%10;
+        i=i/10;
+         k++;
+    }
+    k--;
+    for (p=k;p>=0;p--) {
+        unsigned char c=num[p]+48;
+        ENVIA_CHAR(c);
+    }
+    return;
+}
