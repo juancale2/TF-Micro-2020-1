@@ -87,12 +87,18 @@ if (Signal < thresh && Pulse == true) { // when the values are going down, the b
 
 unsigned int getOxi(void) {
     unsigned int Oxi_bin = getSignal(OXIMETRO);
+    //Escalando la entrada
+    //Oxi_bin ->   0 - 1023
+    //Oxi_real ->  0% - 100%
     unsigned int Oxi_real = Oxi_bin*0.097752;
     return Oxi_real;
 }
 
 float getTemp(void) {
     int Temp_bin = getSignal(TERMOMETRO);
-    float Temp_real = ((float)Temp_bin*0.01955)+30;
+    //Escalando la entrada
+    //Temp_bin ->   0 - 1023
+    //Temp_real ->  30°C - 50°C
+    float Temp_real = (float)Temp_bin*500/1023;
     return Temp_real;
 }
