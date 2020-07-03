@@ -6,7 +6,7 @@
 
 unsigned int getSignal(char sensor) {
     ADC_CONFIG(sensor);
-    int signal = ADC_CONVERTIR();
+    unsigned int signal = ADC_CONVERTIR();
     return signal;
 }
 
@@ -75,6 +75,7 @@ if (Signal < thresh && Pulse == true) { // when the values are going down, the b
     }
 
     if (N > 2500) { // if 2.5 seconds go by without a beat
+        BPM = 0;
         thresh = 530; // set thresh default
         P = 512; // set P default
         T = 512; // set T default
