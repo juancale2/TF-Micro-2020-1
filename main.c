@@ -8,6 +8,7 @@
 
 #include <xc.h>
 #include <stdio.h>
+#include <pic18f4550.h>
 #include "Configuracion.h"
 #include "sensores.h"
 #include "LCD.h"
@@ -16,14 +17,16 @@ char buffer[5];
 const unsigned char cCorazon[8] = {0x00, 0x00, 0x0A, 0x1F, 0x1F, 0x0E, 0x04, 0x00};
 unsigned int Oxigeno;
 float Temperatura;
-char Alarma = 4;
+char Alarma = 3;
+char Beat = 0;
 void config(void);
 void EUSART_Init(long BAUD);
 
 void config(void) {
     TRISA = 0x07;
-    TRISD = 0x00;
     TRISCbits.RC0 = 0;
+    TRISCbits.RC1 = 1;
+    TRISD = 0x00;
     LCD_CONFIG();
     CURSOR_ONOFF(OFF);
     GENERACARACTER(cCorazon, 1);
@@ -58,7 +61,7 @@ void main(void) {
         ESCRIBE_MENSAJE("C",1);
         
         POS_CURSOR(2,15);
-        if(PORTCbits.RC0)
+        if(Beat)
             ENVIA_CHAR(1); 
         else
             ENVIA_CHAR(' ');
@@ -113,20 +116,23 @@ void __interrupt() interrupcion(void) {
         samplePulse();
         if(QS == true) {
             QS = false;
-            LATCbits.LATC0 = 1;
+            Beat = 1;
             TMR0 = 0x0BDB; //150ms
             T0CONbits.TMR0ON = 1;
+            if(Alarma >= 2 || PORTCbits.RC1)
+                LATCbits.LATC0 = 1;
         }
         if(BPM < 30)
             LATCbits.LATC0 = 1;
         
         Oxigeno = getOxi();
         Temperatura = getTemp();
-        TMR1 = 0xD8F0;
+        TMR1 = 0xD8F0; //2ms
     }
     
     if(INTCONbits.TMR0IF){
         INTCONbits.TMR0IF = 0;
+        Beat = 0;
         LATCbits.LATC0 = 0;
         T0CONbits.TMR0ON = 0;
     }
