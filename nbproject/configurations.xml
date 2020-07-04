@@ -8,6 +8,7 @@
       <itemPath>ADC.h</itemPath>
       <itemPath>Configuracion.h</itemPath>
       <itemPath>sensores.h</itemPath>
+      <itemPath>EUSART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +21,7 @@
       <itemPath>ADC.c</itemPath>
       <itemPath>LCD.c</itemPath>
       <itemPath>sensores.c</itemPath>
+      <itemPath>EUSART.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
